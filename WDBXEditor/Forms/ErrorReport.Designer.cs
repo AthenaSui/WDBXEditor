@@ -41,7 +41,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "The following errors occured:";
+            this.label1.Text = "出现以下错误：";
             // 
             // txtErrors
             // 
@@ -63,7 +63,7 @@
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 0;
-            this.btnOK.Text = "Close";
+            this.btnOK.Text = "关闭";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
             // ErrorReport
@@ -80,7 +80,7 @@
             this.MinimizeBox = false;
             this.Name = "ErrorReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Error Report";
+            this.Text = "错误报告";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.ErrorReport_Load);
             this.ResumeLayout(false);

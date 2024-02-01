@@ -99,7 +99,7 @@ namespace WDBXEditor
 		private void Main_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			if (Database.Entries.Count(x => x.Changed) > 0)
-				if (MessageBox.Show("You have unsaved changes. Do you wish to exit?", "Unsaved Changes", MessageBoxButtons.YesNo) == DialogResult.No)
+				if (MessageBox.Show("您有未保存的更改。确定退出吗？", "未保存的更改", MessageBoxButtons.YesNo) == DialogResult.No)
 					e.Cancel = true;
 
 			if (!e.Cancel)
@@ -155,7 +155,7 @@ namespace WDBXEditor
 				advancedDataGridView.ClearSelection();
 				advancedDataGridView.CurrentCell = advancedDataGridView.Rows[0].Cells[0];
 
-				txtStats.Text = $"{LoadedEntry.Data.Columns.Count} fields, {LoadedEntry.Data.Rows.Count} rows";
+				txtStats.Text = $"{LoadedEntry.Data.Columns.Count} 列, {LoadedEntry.Data.Rows.Count} 行";
 				wotLKItemFixToolStripMenuItem.Enabled = LoadedEntry.IsFileOf("Item", Expansion.WotLK); //Control WotLK Item Fix
 				colourPickerToolStripMenuItem.Enabled = (LoadedEntry.IsFileOf("LightIntBand") || LoadedEntry.IsFileOf("LightData")); //Colour picker
 				if (!colourPickerToolStripMenuItem.Enabled)
@@ -213,13 +213,13 @@ namespace WDBXEditor
 		private void advancedDataGridView_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
 		{
 			if (IsLoaded && LoadedEntry.Data != null)
-				txtStats.Text = $"{LoadedEntry.Data.Columns.Count} fields, {LoadedEntry.Data.Rows.Count} rows";
+				txtStats.Text = $"{LoadedEntry.Data.Columns.Count} 列, {LoadedEntry.Data.Rows.Count} 行";
 		}
 
 		private void advancedDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
 		{
 			if (IsLoaded && LoadedEntry.Data != null)
-				txtStats.Text = $"{LoadedEntry.Data.Columns.Count} fields, {LoadedEntry.Data.Rows.Count} rows";
+				txtStats.Text = $"{LoadedEntry.Data.Columns.Count} 列, {LoadedEntry.Data.Rows.Count} 行";
 		}
 
 		private void columnFilter_ItemCheckChanged(object sender, ItemCheckEventArgs e)
@@ -433,7 +433,7 @@ namespace WDBXEditor
 						return;
 				}
 
-				ProgressBarHandle(true, "Loading files...");
+				ProgressBarHandle(true, "加载文件中...");
 				Task.Run(() => Database.LoadFiles(openFileDialog.FileNames))
 				.ContinueWith(x =>
 				{
@@ -460,7 +460,7 @@ namespace WDBXEditor
 					return;
 			}
 
-			ProgressBarHandle(true, "Loading files...");
+			ProgressBarHandle(true, "加载文件中...");
 			Task.Run(() => Database.LoadFiles(files))
 			.ContinueWith(x =>
 			{
@@ -492,7 +492,7 @@ namespace WDBXEditor
 							return;
 					}
 
-					ProgressBarHandle(true, "Loading files...");
+					ProgressBarHandle(true, "加载文件中...");
 					Task.Run(() => Database.LoadFiles(mpq.Streams))
 					.ContinueWith(x =>
 					{
@@ -524,7 +524,7 @@ namespace WDBXEditor
 							return;
 					}
 
-					ProgressBarHandle(true, "Loading files...");
+					ProgressBarHandle(true, "加载文件中...");
 					Task.Run(() => Database.LoadFiles(mpq.Streams))
 					.ContinueWith(x =>
 					{
@@ -641,14 +641,14 @@ namespace WDBXEditor
 			{
 				if (sql.ShowDialog(this) == DialogResult.OK)
 				{
-					ProgressBarHandle(true, "Exporting to SQL...");
+					ProgressBarHandle(true, "导出到SQL数据库中...");
 					Task.Factory.StartNew(() => { LoadedEntry.ToSQLTable(sql.ConnectionString); })
 					.ContinueWith(x =>
 					{
 						if (x.IsFaulted)
-							MessageBox.Show("An error occured exporting to SQL.");
+							MessageBox.Show("导出到SQL数据库出现错误。");
 						else
-							MessageBox.Show("Sucessfully exported to SQL.");
+							MessageBox.Show("成功导出到SQL数据库");
 
 						ProgressBarHandle(false);
 					}, TaskScheduler.FromCurrentSynchronizationContext());
@@ -669,7 +669,7 @@ namespace WDBXEditor
 			{
 				if (sfd.ShowDialog(this) == DialogResult.OK)
 				{
-					ProgressBarHandle(true, "Exporting to SQL file...");
+					ProgressBarHandle(true, "导出为SQL文件中...");
 					Task.Factory.StartNew(() =>
 					{
 						using (FileStream fs = new FileStream(sfd.FileName, FileMode.Create))
@@ -684,9 +684,9 @@ namespace WDBXEditor
 						ProgressBarHandle(false);
 
 						if (x.IsFaulted)
-							MessageBox.Show($"Error generating SQL file {x.Exception.Message}");
+							MessageBox.Show($"生成SQL文件时错误 {x.Exception.Message}");
 						else
-							MessageBox.Show($"File successfully exported to {sfd.FileName}");
+							MessageBox.Show($"文件成功导出到 {sfd.FileName}");
 
 					}, TaskScheduler.FromCurrentSynchronizationContext());
 				}
@@ -709,7 +709,7 @@ namespace WDBXEditor
 
 				if (sfd.ShowDialog(this) == DialogResult.OK)
 				{
-					ProgressBarHandle(true, "Exporting to CSV...");
+					ProgressBarHandle(true, "导出为CSV文件中...");
 					Task.Factory.StartNew(() =>
 					{
 						using (FileStream fs = new FileStream(sfd.FileName, FileMode.Create))
@@ -724,9 +724,9 @@ namespace WDBXEditor
 						ProgressBarHandle(false);
 
 						if (x.IsFaulted)
-							MessageBox.Show($"Error generating CSV file {x.Exception.Message}");
+							MessageBox.Show($"生成CSV文件时出错 {x.Exception.Message}");
 						else
-							MessageBox.Show($"File successfully exported to {sfd.FileName}");
+							MessageBox.Show($"文件成功导出到 {sfd.FileName}");
 
 					}, TaskScheduler.FromCurrentSynchronizationContext());
 				}
@@ -758,7 +758,7 @@ namespace WDBXEditor
 						sfd.Filter = "MPQ Files|*.mpq";
 						break;
 					default:
-						MessageBox.Show("Only DBC and DB2 files can be saved to MPQ.");
+						MessageBox.Show("只有DBC和DB2文件可以保存为MPQ文件。");
 						return;
 				}
 
@@ -783,7 +783,7 @@ namespace WDBXEditor
 
 				if (sfd.ShowDialog(this) == DialogResult.OK)
 				{
-					ProgressBarHandle(true, "Exporting to JSON...");
+					ProgressBarHandle(true, "导出为JSON文件中...");
 					Task.Factory.StartNew(() =>
 					{
 						using (FileStream fs = new FileStream(sfd.FileName, FileMode.Create))
@@ -798,9 +798,9 @@ namespace WDBXEditor
 						ProgressBarHandle(false);
 
 						if (x.IsFaulted)
-							MessageBox.Show($"Error generating JSON file {x.Exception.Message}");
+							MessageBox.Show($"生成JSON文件时出错 {x.Exception.Message}");
 						else
-							MessageBox.Show($"File successfully exported to {sfd.FileName}");
+							MessageBox.Show($"文件成功导出到 {sfd.FileName}");
 
 					}, TaskScheduler.FromCurrentSynchronizationContext());
 				}
@@ -826,14 +826,14 @@ namespace WDBXEditor
 					case DialogResult.OK:
 						SetSource(GetEntry(), false);
 						advancedDataGridView.CacheData();
-						MessageBox.Show("CSV import succeeded.");
+						MessageBox.Show("CSV文件导入成功。");
 						break;
 					case DialogResult.Abort:
 						ProgressBarHandle(false);
 						if (!string.IsNullOrWhiteSpace(loadCsv.ErrorMessage))
-							MessageBox.Show("CSV import failed: " + loadCsv.ErrorMessage);
+							MessageBox.Show("CSV文件导入失败：" + loadCsv.ErrorMessage);
 						else
-							MessageBox.Show("CSV import failed due to incorrect file format.");
+							MessageBox.Show("由于文件格式不正确，CSV文件导入失败。");
 						break;
 				}
 
@@ -850,7 +850,7 @@ namespace WDBXEditor
 		{
 			if (!IsLoaded)
 			{
-				MessageBox.Show("Open a file first.");
+				MessageBox.Show("请先打开一个文件。");
 				return;
 			}
 
@@ -861,13 +861,13 @@ namespace WDBXEditor
 					case DialogResult.OK:
 						SetSource(GetEntry(), false);
 						advancedDataGridView.CacheData();
-						MessageBox.Show("SQL import succeeded.");
+						MessageBox.Show("从SQL数据库导入成功");
 						break;
 					case DialogResult.Abort:
 						if (!string.IsNullOrWhiteSpace(importSql.ErrorMessage))
 							MessageBox.Show(importSql.ErrorMessage);
 						else
-							MessageBox.Show("SQL import failed due to incorrect file format.");
+							MessageBox.Show("由于文件格式不正确，从SQL数据库导入失败。");
 						break;
 				}
 
@@ -972,7 +972,7 @@ namespace WDBXEditor
 				var entry = (DBEntry)lbFiles.SelectedValue;
 				txtCurEntry.Text = entry.FileName;
 				txtCurDefinition.Text = entry.BuildName;
-				txtStats.Text = $"{entry.Data.Columns.Count} fields, {entry.Data.Rows.Count} rows";
+				txtStats.Text = $"{entry.Data.Columns.Count} 列, {entry.Data.Rows.Count} 行";
 
 				SetSource(GetEntry());
 			}
@@ -992,7 +992,7 @@ namespace WDBXEditor
 				var entry = (DBEntry)lbFiles.SelectedValue;
 				txtCurEntry.Text = entry.FileName;
 				txtCurDefinition.Text = entry.BuildName;
-				txtStats.Text = $"{entry.Data.Columns.Count} fields, {entry.Data.Rows.Count} rows";
+				txtStats.Text = $"{entry.Data.Columns.Count} 列, {entry.Data.Rows.Count} 行";
 
 				SetSource(GetEntry());
 			}
@@ -1030,7 +1030,7 @@ namespace WDBXEditor
 							break;
 						case "wdb":
 						case "bin":
-							MessageBox.Show($"Saving is not implemented for {ext.ToUpper()} files.");
+							MessageBox.Show($" {ext.ToUpper()} 文件保存未实现。");
 							return;
 					}
 
@@ -1045,7 +1045,7 @@ namespace WDBXEditor
 			//Do the actual save
 			if (save)
 			{
-				ProgressBarHandle(true, "Saving file...");
+				ProgressBarHandle(true, "保存文件中...");
 				Task.Factory.StartNew(() => new DBReader().Write(LoadedEntry, LoadedEntry.SavePath))
 				.ContinueWith(x =>
 				{
@@ -1054,7 +1054,7 @@ namespace WDBXEditor
 					UpdateListBox();
 
 					if (x.IsFaulted)
-						MessageBox.Show($"Error exporting to file {x.Exception.InnerException.Message}");
+						MessageBox.Show($"导出到文件时出错 {x.Exception.InnerException.Message}");
 
 				}, TaskScheduler.FromCurrentSynchronizationContext());
 			}
@@ -1069,7 +1069,7 @@ namespace WDBXEditor
 			{
 				if (fbd.ShowDialog(this) == DialogResult.OK)
 				{
-					ProgressBarHandle(true, "Saving files...");
+					ProgressBarHandle(true, "保存文件中...");
 
 					Task.Run(() => Database.SaveFiles(fbd.SelectedPath))
 						.ContinueWith(x =>
@@ -1089,7 +1089,7 @@ namespace WDBXEditor
 
 			int id = 0;
 			string res = "";
-			if (ShowInputDialog("Id:", "Go to Id", 0.ToString(), ref res) == DialogResult.OK)
+			if (ShowInputDialog("Id:", "跳转至Id", 0.ToString(), ref res) == DialogResult.OK)
 			{
 				if (int.TryParse(res, out id)) //Ensure the result is an integer
 				{
@@ -1097,10 +1097,10 @@ namespace WDBXEditor
 					if (index >= 0)
 						advancedDataGridView.SelectRow(index);
 					else
-						MessageBox.Show($"Id {id} doesn't exist.");
+						MessageBox.Show($"Id {id} 不存在。");
 				}
 				else
-					MessageBox.Show($"Invalid Id.");
+					MessageBox.Show($"无效的 Id.");
 			}
 		}
 
@@ -1120,7 +1120,7 @@ namespace WDBXEditor
 		{
 			if (!IsLoaded) return;
 
-			ProgressBarHandle(true, "Reloading file...");
+			ProgressBarHandle(true, "重新加载文件中...");
 			Task.Run(() => Database.LoadFiles(new string[] { LoadedEntry.FilePath }))
 			.ContinueWith(x =>
 			{
@@ -1185,13 +1185,13 @@ namespace WDBXEditor
 			if (!IsLoaded) return;
 
 			string res = "";
-			if (ShowInputDialog("Id:", "Id to insert", "1", ref res) == DialogResult.OK)
+			if (ShowInputDialog("Id:", "要插入的 ID", "1", ref res) == DialogResult.OK)
 			{
 				int keyIndex = advancedDataGridView.Columns[LoadedEntry.Key].Index;
 
 				if (!int.TryParse(res, out int id) || id < 0 /*|| !advancedDataGridView.ValidValue(keyIndex, id)*/)
 				{
-					MessageBox.Show($"Invalid Id. Out of range of the column min/max value.");
+					MessageBox.Show($"无效的 Id. 超出列最小值/最大值的范围。");
 				}
 				else
 				{
@@ -1289,10 +1289,10 @@ namespace WDBXEditor
 
 		private void LoadColumnSizeDropdown()
 		{
-			cbColumnMode.Items.Add(new KeyValuePair<string, DataGridViewAutoSizeColumnsMode>("None", DataGridViewAutoSizeColumnsMode.None));
-			cbColumnMode.Items.Add(new KeyValuePair<string, DataGridViewAutoSizeColumnsMode>("Column Header", DataGridViewAutoSizeColumnsMode.ColumnHeader));
-			cbColumnMode.Items.Add(new KeyValuePair<string, DataGridViewAutoSizeColumnsMode>("Displayed Cells", DataGridViewAutoSizeColumnsMode.DisplayedCells));
-			cbColumnMode.Items.Add(new KeyValuePair<string, DataGridViewAutoSizeColumnsMode>("Displayed Cells Except Header", DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader));
+			cbColumnMode.Items.Add(new KeyValuePair<string, DataGridViewAutoSizeColumnsMode>("自定义", DataGridViewAutoSizeColumnsMode.None));
+			cbColumnMode.Items.Add(new KeyValuePair<string, DataGridViewAutoSizeColumnsMode>("字段名", DataGridViewAutoSizeColumnsMode.ColumnHeader));
+			cbColumnMode.Items.Add(new KeyValuePair<string, DataGridViewAutoSizeColumnsMode>("单元格内容", DataGridViewAutoSizeColumnsMode.DisplayedCells));
+			cbColumnMode.Items.Add(new KeyValuePair<string, DataGridViewAutoSizeColumnsMode>("单元格内容（忽视字段名）", DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader));
 
 			cbColumnMode.ValueMember = "Value";
 			cbColumnMode.DisplayMember = "Key";
@@ -1403,7 +1403,7 @@ namespace WDBXEditor
 				}
 
 				//Load the files
-				ProgressBarHandle(true, "Loading files...");
+				ProgressBarHandle(true, "加载文件中...");
 				Task.Run(() => Database.LoadFiles(filenames))
 				.ContinueWith(x =>
 				{
@@ -1474,5 +1474,10 @@ namespace WDBXEditor
 
 			LoadRecentList();
 		}
-	}
+
+        private void columnFilter_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

@@ -58,7 +58,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Find what:";
+            this.label1.Text = "查找内容：";
             // 
             // label2
             // 
@@ -67,7 +67,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Replace with:";
+            this.label2.Text = "替换为：";
             // 
             // txtReplace
             // 
@@ -84,7 +84,7 @@
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(75, 23);
             this.btnFind.TabIndex = 2;
-            this.btnFind.Text = "Find Next";
+            this.btnFind.Text = "查找下一个";
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
@@ -95,7 +95,7 @@
             this.btnReplace.Name = "btnReplace";
             this.btnReplace.Size = new System.Drawing.Size(75, 23);
             this.btnReplace.TabIndex = 3;
-            this.btnReplace.Text = "Replace";
+            this.btnReplace.Text = "替换";
             this.btnReplace.UseVisualStyleBackColor = true;
             this.btnReplace.Click += new System.EventHandler(this.btnReplace_Click);
             // 
@@ -106,7 +106,7 @@
             this.btnReplaceAll.Name = "btnReplaceAll";
             this.btnReplaceAll.Size = new System.Drawing.Size(75, 23);
             this.btnReplaceAll.TabIndex = 4;
-            this.btnReplaceAll.Text = "Replace All";
+            this.btnReplaceAll.Text = "替换全部";
             this.btnReplaceAll.UseVisualStyleBackColor = true;
             this.btnReplaceAll.Click += new System.EventHandler(this.btnReplaceAll_Click);
             // 
@@ -116,7 +116,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -137,7 +137,7 @@
             this.chkCase.Name = "chkCase";
             this.chkCase.Size = new System.Drawing.Size(83, 17);
             this.chkCase.TabIndex = 7;
-            this.chkCase.Text = "Match Case";
+            this.chkCase.Text = "区分大小写";
             this.chkCase.UseVisualStyleBackColor = true;
             this.chkCase.CheckedChanged += new System.EventHandler(this.chkCase_CheckedChanged);
             // 
@@ -148,7 +148,7 @@
             this.chkExact.Name = "chkExact";
             this.chkExact.Size = new System.Drawing.Size(151, 17);
             this.chkExact.TabIndex = 8;
-            this.chkExact.Text = "Match Entire Cell Contents";
+            this.chkExact.Text = "匹配整个单元格内容";
             this.chkExact.UseVisualStyleBackColor = true;
             // 
             // rdoText
@@ -160,7 +160,7 @@
             this.rdoText.Size = new System.Drawing.Size(76, 17);
             this.rdoText.TabIndex = 10;
             this.rdoText.TabStop = true;
-            this.rdoText.Text = "Text Mode";
+            this.rdoText.Text = "文本模式";
             this.rdoText.UseVisualStyleBackColor = true;
             // 
             // rdoFlag
@@ -170,7 +170,7 @@
             this.rdoFlag.Name = "rdoFlag";
             this.rdoFlag.Size = new System.Drawing.Size(75, 17);
             this.rdoFlag.TabIndex = 11;
-            this.rdoFlag.Text = "Flag Mode";
+            this.rdoFlag.Text = "标志模式";
             this.rdoFlag.UseVisualStyleBackColor = true;
             // 
             // FindReplace

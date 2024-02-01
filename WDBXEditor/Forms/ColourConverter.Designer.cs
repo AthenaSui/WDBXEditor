@@ -107,7 +107,7 @@
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(75, 23);
             this.btnGet.TabIndex = 7;
-            this.btnGet.Text = "Get Colour";
+            this.btnGet.Text = "获取颜色";
             this.btnGet.UseVisualStyleBackColor = true;
             this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
             // 
@@ -117,7 +117,7 @@
             this.betSet.Name = "betSet";
             this.betSet.Size = new System.Drawing.Size(75, 23);
             this.betSet.TabIndex = 8;
-            this.betSet.Text = "Set Colour";
+            this.betSet.Text = "设置颜色";
             this.betSet.UseVisualStyleBackColor = true;
             this.betSet.Click += new System.EventHandler(this.betSet_Click);
             // 
@@ -147,7 +147,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 10;
-            this.label4.Text = "WoW Value";
+            this.label4.Text = "WoW 值";
             // 
             // colourWheel
             // 
@@ -187,7 +187,7 @@
             this.MinimumSize = new System.Drawing.Size(333, 264);
             this.Name = "ColourConverter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Colour Picker";
+            this.Text = "取色器";
             this.TopMost = true;
             this.Activated += new System.EventHandler(this.ColourConverter_Activated);
             this.Deactivate += new System.EventHandler(this.ColourConverter_Deactivate);

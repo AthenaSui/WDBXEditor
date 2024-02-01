@@ -87,7 +87,7 @@
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(45, 20);
-            this.toolStripLabel1.Text = "Search:";
+            this.toolStripLabel1.Text = "搜索：";
             // 
             // txtFilter
             // 
@@ -114,7 +114,7 @@
             // 
             this.lblFind.Name = "lblFind";
             this.lblFind.Size = new System.Drawing.Size(109, 20);
-            this.lblFind.Text = "No matches found.";
+            this.lblFind.Text = "找不到匹配项。";
             this.lblFind.Visible = false;
             // 
             // btnSave
@@ -124,7 +124,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 13;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -136,7 +136,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 14;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "关闭";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -156,7 +156,7 @@
             this.MinimumSize = new System.Drawing.Size(540, 400);
             this.Name = "TextEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Text Editor";
+            this.Text = "文本编辑器";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

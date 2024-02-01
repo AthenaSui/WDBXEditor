@@ -79,7 +79,7 @@ namespace WDBXEditor
         {
             if (Database.Definitions.Tables.Count == 0)
             {
-                MessageBox.Show("No defintions found.");
+                MessageBox.Show("找不到定义文件。");
                 return;
             }
 
@@ -87,7 +87,7 @@ namespace WDBXEditor
             {
                 SetFileText();
                 lbDefinitions.DataSource = null;
-                MessageBox.Show("No files to load.");
+                MessageBox.Show("没有要加载的文件。");
                 return;
             }
 
@@ -128,7 +128,7 @@ namespace WDBXEditor
 
         private void SetFileText()
         {
-            lblFiles.Text = Files.Count() == 1 ? "1 file" : Files.Count() + " files";
+            lblFiles.Text = Files.Count() == 1 ? "1 文件" : Files.Count() + " 文件";
         }
 
 		private void chkBuildFilter_CheckedChanged(object sender, EventArgs e)

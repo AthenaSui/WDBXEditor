@@ -58,7 +58,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 14;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "关闭";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -75,11 +75,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 145);
+            this.label9.Location = new System.Drawing.Point(40, 145);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 27;
-            this.label9.Text = "Table:";
+            this.label9.Text = "表：";
             // 
             // txtUser
             // 
@@ -132,7 +132,8 @@
             "",
             "Mangos",
             "CMangos",
-            "Trinity"});
+            "Trinity",
+            "Azerothcore"});
             this.ddlTemplate.Location = new System.Drawing.Point(66, 169);
             this.ddlTemplate.Name = "ddlTemplate";
             this.ddlTemplate.Size = new System.Drawing.Size(203, 21);
@@ -146,26 +147,26 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 28;
-            this.label6.Text = "Template:";
+            this.label6.Text = "模版：";
             // 
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(275, 115);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(67, 21);
+            this.btnRefresh.Size = new System.Drawing.Size(67, 23);
             this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.Text = "Connect";
+            this.btnRefresh.Text = "连接";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 14);
+            this.label1.Location = new System.Drawing.Point(28, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Server:";
+            this.label1.Text = "地址：";
             // 
             // ddlDatabases
             // 
@@ -180,29 +181,29 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 40);
+            this.label2.Location = new System.Drawing.Point(28, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Port:";
+            this.label2.Text = "端口：";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 119);
+            this.label5.Location = new System.Drawing.Point(15, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Database:";
+            this.label5.Text = "数据库：";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 66);
+            this.label3.Location = new System.Drawing.Point(15, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Username:";
+            this.label3.Text = "用户名：";
             // 
             // txtPass
             // 
@@ -215,11 +216,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 92);
+            this.label4.Location = new System.Drawing.Point(27, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Password:";
+            this.label4.Text = "密码";
             // 
             // txtHost
             // 
@@ -243,7 +244,7 @@
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 23);
             this.btnLoad.TabIndex = 12;
-            this.btnLoad.Text = "Load";
+            this.btnLoad.Text = "加载";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
@@ -263,7 +264,7 @@
             this.MinimumSize = new System.Drawing.Size(389, 487);
             this.Name = "WotLKItemFix";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "WotLK Item Import";
+            this.Text = "WLK版本物品导入";
             this.Load += new System.EventHandler(this.WotLKItemFix_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

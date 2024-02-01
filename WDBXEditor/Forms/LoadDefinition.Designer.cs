@@ -48,7 +48,7 @@ namespace WDBXEditor
 			this.btnClose.Name = "btnClose";
 			this.btnClose.Size = new System.Drawing.Size(75, 23);
 			this.btnClose.TabIndex = 2;
-			this.btnClose.Text = "Close";
+			this.btnClose.Text = "关闭";
 			this.btnClose.UseVisualStyleBackColor = true;
 			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 
@@ -58,7 +58,7 @@ namespace WDBXEditor
 			this.btnLoad.Name = "btnLoad";
 			this.btnLoad.Size = new System.Drawing.Size(75, 23);
 			this.btnLoad.TabIndex = 1;
-			this.btnLoad.Text = "Load";
+			this.btnLoad.Text = "打开";
 			this.btnLoad.UseVisualStyleBackColor = true;
 			this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
 			// 
@@ -73,7 +73,7 @@ namespace WDBXEditor
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(193, 13);
 			this.label3.TabIndex = 11;
-			this.label3.Text = "Builds will be limited to available options";
+			this.label3.Text = "显示可用版本";
 			// 
 			// btnNewWindow
 			// 
@@ -82,7 +82,7 @@ namespace WDBXEditor
 			this.btnNewWindow.Name = "btnNewWindow";
 			this.btnNewWindow.Size = new System.Drawing.Size(29, 23);
 			this.btnNewWindow.TabIndex = 12;
-			this.toolTip1.SetToolTip(this.btnNewWindow, "Opens in a new instance of the program");
+			this.toolTip1.SetToolTip(this.btnNewWindow, "在新程序中打开");
 			this.btnNewWindow.UseVisualStyleBackColor = true;
 			this.btnNewWindow.Click += new System.EventHandler(this.btnNewWindow_Click);
 			// 
@@ -92,7 +92,7 @@ namespace WDBXEditor
 			this.lblFiles.Name = "lblFiles";
 			this.lblFiles.Size = new System.Drawing.Size(64, 13);
 			this.lblFiles.TabIndex = 13;
-			this.lblFiles.Text = "0 Files";
+			this.lblFiles.Text = "0 文件";
 			this.lblFiles.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
 			// chkBuildFilter
@@ -102,7 +102,7 @@ namespace WDBXEditor
 			this.chkBuildFilter.Name = "chkBuildFilter";
 			this.chkBuildFilter.Size = new System.Drawing.Size(68, 17);
 			this.chkBuildFilter.TabIndex = 14;
-			this.chkBuildFilter.Text = "All Builds";
+			this.chkBuildFilter.Text = "所有版本";
 			this.chkBuildFilter.UseVisualStyleBackColor = true;
 			this.chkBuildFilter.CheckedChanged += new System.EventHandler(this.chkBuildFilter_CheckedChanged);
 			// 
@@ -136,7 +136,7 @@ namespace WDBXEditor
 			this.Name = "LoadDefinition";
 			this.ShowIcon = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "Load Definition";
+			this.Text = "加载定义文件";
 			this.Load += new System.EventHandler(this.LoadDefinition_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

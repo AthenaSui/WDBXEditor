@@ -48,7 +48,7 @@ namespace WDBXEditor.Forms
             okButton.DialogResult = DialogResult.OK;
             okButton.Name = "okButton";
             okButton.Size = new System.Drawing.Size(75, 23);
-            okButton.Text = "&OK";
+            okButton.Text = "&确认";
             okButton.Location = new System.Drawing.Point(size.Width - 80 - 80, 49);
             inputBox.Controls.Add(okButton);
 
@@ -56,7 +56,7 @@ namespace WDBXEditor.Forms
             cancelButton.DialogResult = DialogResult.Cancel;
             cancelButton.Name = "cancelButton";
             cancelButton.Size = new System.Drawing.Size(75, 23);
-            cancelButton.Text = "&Cancel";
+            cancelButton.Text = "&取消";
             cancelButton.Location = new System.Drawing.Point(size.Width - 80, 49);
             inputBox.Controls.Add(cancelButton);
 
@@ -100,7 +100,7 @@ namespace WDBXEditor.Forms
             okButton.DialogResult = DialogResult.OK;
             okButton.Name = "yesButton";
             okButton.Size = new System.Drawing.Size(75, 26);
-            okButton.Text = "Append";
+            okButton.Text = "附加";
             okButton.Location = new System.Drawing.Point(size.Width - 80 - 80 - 80, 69);
             okButton.Tag = DialogResult.Yes;
             inputBox.Controls.Add(okButton);
@@ -109,7 +109,7 @@ namespace WDBXEditor.Forms
             overrideButton.DialogResult = DialogResult.Cancel;
             overrideButton.Name = "overButton";
             overrideButton.Size = new System.Drawing.Size(75, 26);
-            overrideButton.Text = "Overwrite";
+            overrideButton.Text = "覆盖";
             overrideButton.Location = new System.Drawing.Point(size.Width - 80 - 80, 69);
             overrideButton.Tag = DialogResult.No;
             inputBox.Controls.Add(overrideButton);
@@ -118,7 +118,7 @@ namespace WDBXEditor.Forms
             cancelButton.DialogResult = DialogResult.Cancel;
             cancelButton.Name = "cancelButton";
             cancelButton.Size = new System.Drawing.Size(75, 26);
-            cancelButton.Text = "Cancel";
+            cancelButton.Text = "取消";
             cancelButton.Location = new System.Drawing.Point(size.Width - 80, 69);
             cancelButton.Tag = DialogResult.Cancel;
             inputBox.Controls.Add(cancelButton);

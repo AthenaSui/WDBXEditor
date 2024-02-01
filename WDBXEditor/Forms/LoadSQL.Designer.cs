@@ -57,38 +57,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 14);
+            this.label1.Location = new System.Drawing.Point(28, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Server:";
+            this.label1.Text = "地址：";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 40);
+            this.label2.Location = new System.Drawing.Point(28, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Port:";
+            this.label2.Text = "端口：";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 66);
+            this.label3.Location = new System.Drawing.Point(15, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Username:";
+            this.label3.Text = "用户名：";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 92);
+            this.label4.Location = new System.Drawing.Point(27, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Password:";
+            this.label4.Text = "密码：";
             // 
             // txtHost
             // 
@@ -123,11 +123,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 119);
+            this.label5.Location = new System.Drawing.Point(15, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Database:";
+            this.label5.Text = "数据库：";
             // 
             // ddlDatabases
             // 
@@ -143,9 +143,9 @@
             // 
             this.btnRefresh.Location = new System.Drawing.Point(275, 115);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(67, 21);
+            this.btnRefresh.Size = new System.Drawing.Size(67, 23);
             this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.Text = "Connect";
+            this.btnRefresh.Text = "连接";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -188,42 +188,41 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 145);
+            this.label9.Location = new System.Drawing.Point(40, 145);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 27;
-            this.label9.Text = "Table:";
+            this.label9.Text = "表：";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 238);
-            this.label6.MaximumSize = new System.Drawing.Size(370, 0);
+            this.label6.Location = new System.Drawing.Point(4, 240);
+            this.label6.MaximumSize = new System.Drawing.Size(200, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 13);
             this.label6.TabIndex = 25;
-            this.label6.Text = "Override All: Replaces all data";
+            this.label6.Text = "覆盖：替换全部数据";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 207);
-            this.label7.MaximumSize = new System.Drawing.Size(350, 0);
+            this.label7.Location = new System.Drawing.Point(5, 220);
+            this.label7.MaximumSize = new System.Drawing.Size(300, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(349, 26);
+            this.label7.Size = new System.Drawing.Size(180, 13);
             this.label7.TabIndex = 24;
-            this.label7.Text = "Update Existing: Imports new records and updates any existing ones that are diffe" +
-    "rent";
+            this.label7.Text = "更新：导入新记录并更新所有不同的现有记录";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 189);
+            this.label8.Location = new System.Drawing.Point(5, 200);
             this.label8.MaximumSize = new System.Drawing.Size(200, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(184, 13);
             this.label8.TabIndex = 23;
-            this.label8.Text = "Import New: Imports new records only";
+            this.label8.Text = "导入：仅导入新记录";
             // 
             // radNewOnly
             // 
@@ -234,17 +233,17 @@
             this.radNewOnly.Size = new System.Drawing.Size(79, 17);
             this.radNewOnly.TabIndex = 8;
             this.radNewOnly.TabStop = true;
-            this.radNewOnly.Text = "Import New";
+            this.radNewOnly.Text = "导入";
             this.radNewOnly.UseVisualStyleBackColor = true;
             // 
             // radOverride
             // 
             this.radOverride.AutoSize = true;
-            this.radOverride.Location = new System.Drawing.Point(256, 169);
+            this.radOverride.Location = new System.Drawing.Point(245, 169);
             this.radOverride.Name = "radOverride";
             this.radOverride.Size = new System.Drawing.Size(79, 17);
             this.radOverride.TabIndex = 10;
-            this.radOverride.Text = "Override All";
+            this.radOverride.Text = "覆盖";
             this.radOverride.UseVisualStyleBackColor = true;
             // 
             // radUpdate
@@ -254,7 +253,7 @@
             this.radUpdate.Name = "radUpdate";
             this.radUpdate.Size = new System.Drawing.Size(99, 17);
             this.radUpdate.TabIndex = 9;
-            this.radUpdate.Text = "Update Existing";
+            this.radUpdate.Text = "更新";
             this.radUpdate.UseVisualStyleBackColor = true;
             // 
             // btnLoad
@@ -264,7 +263,7 @@
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 23);
             this.btnLoad.TabIndex = 11;
-            this.btnLoad.Text = "Load";
+            this.btnLoad.Text = "写入";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
@@ -274,7 +273,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 12;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "关闭";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -294,7 +293,7 @@
             this.MinimumSize = new System.Drawing.Size(396, 342);
             this.Name = "LoadSQL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "SQL Settings";
+            this.Text = "SQL数据库设置";
             this.Load += new System.EventHandler(this.LoadSQL_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

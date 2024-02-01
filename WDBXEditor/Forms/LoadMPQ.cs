@@ -188,7 +188,7 @@ namespace WDBXEditor
 					btnParse.Enabled = true;
 				}
 
-				this.Text = "Load From CASC";
+				this.Text = "载入CASC文件";
 			}
 		}
 

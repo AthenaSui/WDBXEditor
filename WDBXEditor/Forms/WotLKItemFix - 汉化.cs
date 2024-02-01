@@ -41,7 +41,7 @@ namespace WDBXEditor
 
 			try
 			{
-				string sql = "SHOW DATABASES;";
+				string sql = "显示数据库：";
 				using (MySqlConnection connection = new MySqlConnection(ConnectionString))
 				{
 					connection.Open();
@@ -104,7 +104,7 @@ namespace WDBXEditor
 
 				try
 				{
-					string sql = $"USE {ddlDatabases.Text}; SHOW TABLES;";
+					string sql = $"使用 {ddlDatabases.Text}; 显示表：";
 					using (MySqlConnection connection = new MySqlConnection(ConnectionString))
 					{
 						connection.Open();
@@ -170,12 +170,7 @@ namespace WDBXEditor
 				for (int i = 0; i < fields.Count; i++)
 					schema.Rows.Add(fields[i].Name, TrinityLookup[i]);
 			}
-            else if (ddlTemplate.Text == "Azerothcore")
-            {
-                for (int i = 0; i < fields.Count; i++)
-                    schema.Rows.Add(fields[i].Name, AzerothcoreLookup[i]);
-            }
-            else if (ddlTemplate.Text.IndexOf("Mangos") > -1)
+			else if (ddlTemplate.Text.IndexOf("Mangos") > -1)
 			{
 				for (int i = 0; i < fields.Count; i++)
 					schema.Rows.Add(fields[i].Name, MangosLookup[i]);
@@ -196,7 +191,5 @@ namespace WDBXEditor
 
 		private readonly string[] TrinityLookup = new[] { "Entry", "Class", "SubClass", "SoundOverrideSubclass", "Material", "DisplayId", "InventoryType", "Sheath" };
 
-        private readonly string[] AzerothcoreLookup = new[] { "entry", "class", "subclass", "SoundOverrideSubclass", "Material", "displayId", "InventoryType", "sheath" };
-
-    }
+	}
 }

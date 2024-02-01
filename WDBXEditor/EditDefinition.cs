@@ -75,7 +75,7 @@ namespace WDBXEditor
         {
             txtBuild.Text = tbl.Build.ToString();
             txtFileName.Text = tbl.Name;
-            this.Text = $"Edit Definition - {tbl.Name} {tbl.BuildText}";
+            this.Text = $"编辑定义文件 - {tbl.Name} {tbl.BuildText}";
 
             dgvDefintion.RowHeadersVisible = false;
             dgvDefintion.ColumnHeadersVisible = false;
@@ -95,28 +95,28 @@ namespace WDBXEditor
             //Build check
             if (!int.TryParse(txtBuild.Text, out build) || build == 0)
             {
-                MessageBox.Show("Please enter a valid build number.");
+                MessageBox.Show("请输入有效的版本数字。");
                 return;
             }
 
             //Name check
             if (string.IsNullOrWhiteSpace(txtFileName.Text))
             {
-                MessageBox.Show("Please enter a valid table name.");
+                MessageBox.Show("请输入有效的表名字");
                 return;
             }
 
             //Index check
             if (dataSource.Count(x => x.IsIndex) != 1 || dataSource.FirstOrDefault(x => x.IsIndex)?.Type != "int")
             {
-                MessageBox.Show("Please ensure there is exactly 1 index of int type.");
+                MessageBox.Show("请确保有1个int类型的索引。");
                 return;
             }
 
             //Unqiue field name check
             if (dataSource.Count != dataSource.Select(x => x.Name.ToLower()).Distinct().Count())
             {
-                MessageBox.Show("Fields must have unqiue names.");
+                MessageBox.Show("字段必须具有unqiue名称。");
                 return;
             }
 
@@ -133,19 +133,19 @@ namespace WDBXEditor
             }
             else if (matches == 1 && Database.Definitions.Tables.First(x => x.Build == currentTable.Build && x.Name == currentTable.Name) != currentTable)
             {
-                MessageBox.Show("Matching definition has been found.");
+                MessageBox.Show("已找到匹配的定义文件。");
                 return;
             }
             else if (matches > 1)
             {
-                MessageBox.Show("Multiple matching definitions have been found.");
+                MessageBox.Show("找到多个匹配的定义文件。");
                 return;
             }
 
             if (Database.Definitions.SaveDefinitions())
             {
                 LoadDefinitions(true);
-                MessageBox.Show("Definitions Saved");
+                MessageBox.Show("定义文件已保存。");
             }
         }
 

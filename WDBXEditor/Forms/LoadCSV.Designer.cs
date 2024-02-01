@@ -59,7 +59,7 @@
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 23);
             this.btnLoad.TabIndex = 7;
-            this.btnLoad.Text = "Load";
+            this.btnLoad.Text = "加载";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
@@ -69,7 +69,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 8;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "关闭";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -91,7 +91,7 @@
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(80, 23);
             this.btnBrowse.TabIndex = 2;
-            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.Text = "浏览";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
@@ -102,7 +102,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "File:";
+            this.label1.Text = "文件：";
             // 
             // chkHeader
             // 
@@ -113,8 +113,8 @@
             this.chkHeader.Name = "chkHeader";
             this.chkHeader.Size = new System.Drawing.Size(114, 17);
             this.chkHeader.TabIndex = 6;
-            this.chkHeader.Text = "Has Header Row?";
-            this.toolTip1.SetToolTip(this.chkHeader, "Will ignore the first row");
+            this.chkHeader.Text = "是否有标题栏";
+            this.toolTip1.SetToolTip(this.chkHeader, "将忽略第一行");
             this.chkHeader.UseVisualStyleBackColor = true;
             // 
             // radUpdate
@@ -124,17 +124,17 @@
             this.radUpdate.Name = "radUpdate";
             this.radUpdate.Size = new System.Drawing.Size(99, 17);
             this.radUpdate.TabIndex = 4;
-            this.radUpdate.Text = "Update Existing";
+            this.radUpdate.Text = "更新";
             this.radUpdate.UseVisualStyleBackColor = true;
             // 
             // radOverride
             // 
             this.radOverride.AutoSize = true;
-            this.radOverride.Location = new System.Drawing.Point(227, 39);
+            this.radOverride.Location = new System.Drawing.Point(220, 39);
             this.radOverride.Name = "radOverride";
             this.radOverride.Size = new System.Drawing.Size(79, 17);
             this.radOverride.TabIndex = 5;
-            this.radOverride.Text = "Override All";
+            this.radOverride.Text = "覆盖";
             this.radOverride.UseVisualStyleBackColor = true;
             // 
             // radNewOnly
@@ -146,7 +146,7 @@
             this.radNewOnly.Size = new System.Drawing.Size(79, 17);
             this.radNewOnly.TabIndex = 3;
             this.radNewOnly.TabStop = true;
-            this.radNewOnly.Text = "Import New";
+            this.radNewOnly.Text = "导入";
             this.radNewOnly.UseVisualStyleBackColor = true;
             // 
             // panel1
@@ -180,58 +180,57 @@
             // 
             this.rdoFixIds.AutoSize = true;
             this.rdoFixIds.Checked = true;
-            this.rdoFixIds.Location = new System.Drawing.Point(3, 3);
+            this.rdoFixIds.Location = new System.Drawing.Point(0, 3);
             this.rdoFixIds.Name = "rdoFixIds";
             this.rdoFixIds.Size = new System.Drawing.Size(55, 17);
             this.rdoFixIds.TabIndex = 20;
             this.rdoFixIds.TabStop = true;
-            this.rdoFixIds.Text = "Fix Ids";
-            this.toolTip1.SetToolTip(this.rdoFixIds, "This will increment all Ids so that there are no duplicates");
+            this.rdoFixIds.Text = "更新Id";
+            this.toolTip1.SetToolTip(this.rdoFixIds, "Id将自动增加，这样就不会出现重复");
             this.rdoFixIds.UseVisualStyleBackColor = true;
             this.rdoFixIds.CheckedChanged += new System.EventHandler(this.chkFixIds_CheckedChanged);
             // 
             // rdoNewest
             // 
             this.rdoNewest.AutoSize = true;
-            this.rdoNewest.Location = new System.Drawing.Point(65, 3);
+            this.rdoNewest.Location = new System.Drawing.Point(70, 3);
             this.rdoNewest.Name = "rdoNewest";
             this.rdoNewest.Size = new System.Drawing.Size(89, 17);
             this.rdoNewest.TabIndex = 21;
-            this.rdoNewest.Text = "Take Newest";
-            this.toolTip1.SetToolTip(this.rdoNewest, "This will override previous data if a newer row with the same Id is encountered");
+            this.rdoNewest.Text = "选择最新";
+            this.toolTip1.SetToolTip(this.rdoNewest, "如果遇到具有相同Id的较新行，这将覆盖以前的数据");
             this.rdoNewest.UseVisualStyleBackColor = true;
             this.rdoNewest.CheckedChanged += new System.EventHandler(this.chkNewest_CheckedChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 138);
+            this.label4.Location = new System.Drawing.Point(5, 140);
             this.label4.MaximumSize = new System.Drawing.Size(370, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(185, 13);
             this.label4.TabIndex = 19;
-            this.label4.Text = "Override All: Replaces all current data";
+            this.label4.Text = "覆盖：替换所有当前数据";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 107);
+            this.label3.Location = new System.Drawing.Point(6, 120);
             this.label3.MaximumSize = new System.Drawing.Size(350, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(349, 26);
+            this.label3.Size = new System.Drawing.Size(349, 13);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Update Existing: Imports new records and updates any existing ones that are diffe" +
-    "rent";
+            this.label3.Text = "更新：导入新记录并更新所有不同的现有记录";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 89);
+            this.label2.Location = new System.Drawing.Point(6, 100);
             this.label2.MaximumSize = new System.Drawing.Size(200, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 13);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Import New: Imports new records only";
+            this.label2.Text = "导入：仅导入新记录";
             // 
             // LoadCSV
             // 
@@ -249,7 +248,7 @@
             this.MinimumSize = new System.Drawing.Size(396, 247);
             this.Name = "LoadCSV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "CSV Settings";
+            this.Text = "CSV导入设置";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

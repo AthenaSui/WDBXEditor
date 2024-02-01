@@ -42,7 +42,7 @@ namespace WDBXEditor.ConsoleHandler
             //Check the required definition exists
             var def = Database.Definitions.Tables.FirstOrDefault(x => x.Build == build && x.Name.Equals(filenoext, IGNORECASE));
             if (def == null)
-                throw new Exception($"   Could not find definition for {Path.GetFileName(file)} build {build}.");
+                throw new Exception($"   未找到 {Path.GetFileName(file)} 版本 {build}的定义文件。");
 
             Database.BuildNumber = build;
             var dic = new ConcurrentDictionary<string, MemoryStream>();
@@ -51,7 +51,7 @@ namespace WDBXEditor.ConsoleHandler
             switch (sType)
             {
                 case SourceType.MPQ:
-                    Console.WriteLine("Loading from MPQ archive...");
+                    Console.WriteLine("从MPQ档案加载中...");
                     using (MpqArchive archive = new MpqArchive(source, FileAccess.Read))
                     {
                         string line = string.Empty;
@@ -75,7 +75,7 @@ namespace WDBXEditor.ConsoleHandler
                     }
                     break;
                 case SourceType.CASC:
-                    Console.WriteLine("Loading from CASC directory...");
+                    Console.WriteLine("从CASC目录加载中...");
                     using (var casc = new CASCHandler(source))
                     {
                         string fullname = filename;
@@ -102,9 +102,9 @@ namespace WDBXEditor.ConsoleHandler
                 throw new Exception("   " + error);
 
             if (Database.Entries.Count == 0)
-                throw new Exception("   File could not be loaded.");
+                throw new Exception("   文件无法加载。");
 
-            Console.WriteLine($"{Path.GetFileName(file)} loaded.");
+            Console.WriteLine($"{Path.GetFileName(file)} 已加载。");
             Console.WriteLine("");
         }
 
@@ -127,7 +127,7 @@ namespace WDBXEditor.ConsoleHandler
             switch (sType)
             {
                 case SourceType.MPQ:
-                    Console.WriteLine("Loading from MPQ archive...");
+                    Console.WriteLine("从MPQ档案加载中...");
                     using (MpqArchive archive = new MpqArchive(source, FileAccess.Read))
                     {
                         string line = string.Empty;
@@ -147,7 +147,7 @@ namespace WDBXEditor.ConsoleHandler
                     }
                     break;
                 case SourceType.CASC:
-                    Console.WriteLine("Loading from CASC directory...");
+                    Console.WriteLine("从CASC目录加载中...");
                     using (var casc = new CASCHandler(source))
                     {
                         var files = Constants.ClientDBFileNames.Where(x => Regex.IsMatch(Path.GetFileName(x), regexfilter, RegexOptions.Compiled | RegexOptions.IgnoreCase));
@@ -162,7 +162,7 @@ namespace WDBXEditor.ConsoleHandler
             }
 
             if (dic.Count == 0)
-                throw new Exception("   No matching files found.");
+                throw new Exception("   找不到匹配的文件。");
 
             if (!Directory.Exists(output))
                 Directory.CreateDirectory(output);
@@ -178,7 +178,7 @@ namespace WDBXEditor.ConsoleHandler
 
             dic.Clear();
 
-            Console.WriteLine($"   Successfully extracted files.");
+            Console.WriteLine($"   成功提取文件。");
             Console.WriteLine("");
         }
         #endregion
@@ -216,7 +216,7 @@ namespace WDBXEditor.ConsoleHandler
 
                 fs.Write(data, 0, data.Length);
 
-                Console.WriteLine($"Successfully exported to {output}.");
+                Console.WriteLine($"成功导出到 {output}.");
             }
         }
 
@@ -242,11 +242,11 @@ namespace WDBXEditor.ConsoleHandler
                 {
                     conn.Open();
                 }
-                catch { throw new Exception("   Incorrect MySQL login details."); }
+                catch { throw new Exception("   MySQL登录信息不正确。"); }
 
                 entry.ToSQLTable(connection);
 
-                Console.WriteLine($"Successfully exported to {conn.Database}.");
+                Console.WriteLine($"成功导出到 {conn.Database}.");
             }
         }
 
@@ -276,7 +276,7 @@ namespace WDBXEditor.ConsoleHandler
             if (!entry.ImportSQL(mode, connection, $"db_{entry.TableStructure.Name.ToLower()}_{entry.Build}", out importError))
             {
                 var dbcFileName = ParamCheck<string>(pmap, "-f");
-                throw new Exception($"   Error importing SQL into {dbcFileName}: {importError}");
+                throw new Exception($"   从SQL服务器导入 {dbcFileName}: {importError}时出错。");
             }
 
             new DBReader().Write(entry, entry.SavePath);
@@ -298,12 +298,12 @@ namespace WDBXEditor.ConsoleHandler
                 }
                 catch
                 {
-                    if (required) throw new Exception($"   Parameter {field} is invalid");
+                    if (required) throw new Exception($"   参数 {field} 无效");
                 }
             }
 
             if (required)
-                throw new Exception($"   Missing parameter '{field}'");
+                throw new Exception($"   缺失参数 '{field}'");
 
             object defaultval = (typeof(T) == typeof(string) ? (object)string.Empty : (object)0);
             return (T)Convert.ChangeType(defaultval, typeof(T));
@@ -321,7 +321,7 @@ namespace WDBXEditor.ConsoleHandler
             else if (Directory.Exists(source)) //CASC
                 return SourceType.CASC;
 
-            throw new Exception($"   Invalid source selected. Options are .MPQ, WoW Directory or blank.");
+            throw new Exception($"   选择的源无效。请选择.MPQ文件、魔兽世界目录或空白。");
         }
 
         private static OutputType GetOutputType(string output)
@@ -337,7 +337,7 @@ namespace WDBXEditor.ConsoleHandler
                     return OutputType.JSON;
             }
 
-            throw new Exception("   Invalid output type. Options are CSV, JSON or SQL.");
+            throw new Exception("   无效的输出类型。请选择CSV、JSON或SQL文件。");
         }
 
 

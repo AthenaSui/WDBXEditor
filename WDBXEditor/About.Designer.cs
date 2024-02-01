@@ -38,9 +38,10 @@
             // 
             this.imgLogo.BackColor = System.Drawing.SystemColors.Control;
             this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
-            this.imgLogo.Location = new System.Drawing.Point(12, 12);
+            this.imgLogo.Location = new System.Drawing.Point(16, 14);
+            this.imgLogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(40, 40);
+            this.imgLogo.Size = new System.Drawing.Size(53, 46);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
@@ -52,27 +53,29 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAbout.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAbout.Enabled = false;
-            this.txtAbout.Location = new System.Drawing.Point(58, 12);
+            this.txtAbout.Location = new System.Drawing.Point(77, 14);
+            this.txtAbout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtAbout.Name = "txtAbout";
             this.txtAbout.ReadOnly = true;
-            this.txtAbout.Size = new System.Drawing.Size(289, 99);
+            this.txtAbout.Size = new System.Drawing.Size(385, 189);
             this.txtAbout.TabIndex = 1;
-            this.txtAbout.Text = "WDBX Editor\n\nCreated by Barncastle © 2016\n\nCredits to Ladislav Zezula for the awe" +
-    "some StormLib\n\nThanks to everyone that contributes to the WoWDev wiki";
+            this.txtAbout.Text = "WDBX Editor\n\n由Barncastle创建 © 2016\n\n感谢Ladislav Zezula出色的StormLib" +
+    "\n\n感谢所有为WoWDev wiki做出贡献的人";
             // 
             // About
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 113);
+            this.ClientSize = new System.Drawing.Size(464, 205);
             this.Controls.Add(this.txtAbout);
             this.Controls.Add(this.imgLogo);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "About";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "About";
+            this.Text = "关于";
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.ResumeLayout(false);
 

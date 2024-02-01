@@ -577,7 +577,7 @@ namespace WDBXEditor.Storage
 				version = MpqArchiveVersion.Version4;
 			else
 			{
-				MessageBox.Show("Only clients before WoD support MPQ archives.");
+				MessageBox.Show("只有WoD之前的客户端支持MPQ存档。");
 				return;
 			}
 
@@ -586,7 +586,7 @@ namespace WDBXEditor.Storage
 				MpqArchive archive = null;
 				if (File.Exists(filename))
 				{
-					switch (ShowOverwriteDialog("You've selected an existing MPQ archive.\r\nWhich action would you like to take?", "Existing MPQ"))
+					switch (ShowOverwriteDialog("您已经选择了一个现有的MPQ存档。\r\n您想采取哪种操作？", "现有MPQ"))
 					{
 						case DialogResult.Yes: //Append
 							archive = new MpqArchive(filename, FileAccess.Write);
@@ -615,7 +615,7 @@ namespace WDBXEditor.Storage
 			} //Save the file
 			catch (Exception ex)
 			{
-				MessageBox.Show($"Error exporting to MPQ archive {ex.Message}");
+				MessageBox.Show($"导出到MPQ存档时出错 {ex.Message}");
 			}
 		}
 
@@ -759,7 +759,7 @@ namespace WDBXEditor.Storage
 			}
 			catch (FormatException)
 			{
-				error = $"Mismatch of data to datatype in row index {usedids.Count + 1}";
+				error = $"行索引中的数据与数据类型不匹配 {usedids.Count + 1}";
 				return false;
 			}
 			catch (Exception ex)
@@ -771,10 +771,10 @@ namespace WDBXEditor.Storage
 			switch (Data.ShallowCompare(importTable, false))
 			{
 				case CompareResult.Type:
-					error = "Import Failed: Imported data has one or more incorrect column types.";
+					error = "导入失败：导入的数据有一个或多个不正确的列类型。";
 					return false;
 				case CompareResult.Count:
-					error = "Import Failed: Imported data has an incorrect number of columns.";
+					error = "导入失败：导入的数据的列数不正确。";
 					return false;
 			}
 
@@ -819,7 +819,7 @@ namespace WDBXEditor.Storage
 				catch (Exception ex)
 				{
 					System.Diagnostics.Debug.WriteLine(ex.Message);
-					error = "Import Failed:\n" + ex.Message;
+					error = "导入失败：\n" + ex.Message;
 					return false;
 				}
 			}
@@ -834,13 +834,13 @@ namespace WDBXEditor.Storage
 			switch (Data.ShallowCompare(importTable))
 			{
 				case CompareResult.DBNull:
-					error = "Import Failed: Imported data contains NULL values.";
+					error = "导入失败：导入的数据包含NULL值。";
 					return false;
 				case CompareResult.Type:
-					error = "Import Failed: Imported data has incorrect column types.";
+					error = "导入失败：导入的数据具有不正确的列类型。";
 					return false;
 				case CompareResult.Count:
-					error = "Import Failed: Imported data has an incorrect number of columns.";
+					error = "导入失败：导入的数据的列数不正确。";
 					return false;
 			}
 

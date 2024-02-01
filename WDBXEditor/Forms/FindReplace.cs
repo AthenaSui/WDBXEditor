@@ -43,14 +43,14 @@ namespace WDBXEditor
         {
             if (replace)
             {
-                this.Text = "Replace";
+                this.Text = "替换";
                 txtReplace.Enabled = true;
                 btnReplace.Enabled = true;
                 btnReplaceAll.Enabled = true;
             }
             else
             {
-                this.Text = "Find";
+                this.Text = "查找";
                 txtReplace.Enabled = false;
                 btnReplace.Enabled = false;
                 btnReplaceAll.Enabled = false;
@@ -78,12 +78,12 @@ namespace WDBXEditor
 
             if (r.X == -1 || r.Y == -1)
             {
-                lblResult.Text = "No results found.";
+                lblResult.Text = "未找到结果。";
                 lblResult.Visible = true;
             }
             else if (r.X == c.RowIndex && r.Y == c.ColumnIndex)
             {
-                lblResult.Text = "One result found.";
+                lblResult.Text = "找到一个结果。";
                 lblResult.Visible = true;
             }
             else
@@ -127,7 +127,7 @@ namespace WDBXEditor
 
             if ((r.X == -1 || r.Y == -1))
             {
-                lblResult.Text = "No results found.";
+                lblResult.Text = "未找到结果。";
                 lblResult.Visible = true;
                 return;
             }
@@ -216,7 +216,7 @@ namespace WDBXEditor
                 }
             }
 
-            lblResult.Text = $"Replaced {found} records.";
+            lblResult.Text = $"已替换 {found} 记录。";
             lblResult.Visible = true;
         }
 

@@ -78,7 +78,7 @@
             this.btnEmpty.Name = "btnEmpty";
             this.btnEmpty.Size = new System.Drawing.Size(26, 23);
             this.btnEmpty.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.btnEmpty, "Hide Empty");
+            this.toolTip1.SetToolTip(this.btnEmpty, "隐藏空单元格");
             this.btnEmpty.UseVisualStyleBackColor = true;
             // 
             // btnReset
@@ -90,7 +90,7 @@
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(26, 23);
             this.btnReset.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.btnReset, "Reset");
+            this.toolTip1.SetToolTip(this.btnReset, "重置");
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 

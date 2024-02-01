@@ -41,7 +41,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(161, 13);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Select which hotfix entry to read:";
+            this.label3.Text = "选择要读取的修补程序条目：";
             // 
             // btnLoad
             // 
@@ -49,7 +49,7 @@
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 23);
             this.btnLoad.TabIndex = 15;
-            this.btnLoad.Text = "Load";
+            this.btnLoad.Text = "加载";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
@@ -59,7 +59,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 16;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "关闭";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -87,7 +87,7 @@
             this.Name = "LoadHotfix";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Load Hotfix";
+            this.Text = "加载修复";
             this.Load += new System.EventHandler(this.LoadHotfix_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

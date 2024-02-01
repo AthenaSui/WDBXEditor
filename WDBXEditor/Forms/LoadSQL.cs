@@ -39,7 +39,7 @@ namespace WDBXEditor
                 label6.Enabled = false;
                 label7.Enabled = false;
                 label8.Enabled = false;
-                btnLoad.Text = "Export";
+                btnLoad.Text = "导出";
                 ddlDatabases.DropDownStyle = ComboBoxStyle.DropDownList;
             }
 

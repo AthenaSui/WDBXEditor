@@ -66,7 +66,7 @@ namespace WDBXEditor
 			this.btnParse.Name = "btnParse";
 			this.btnParse.Size = new System.Drawing.Size(59, 23);
 			this.btnParse.TabIndex = 9;
-			this.btnParse.Text = "Load";
+			this.btnParse.Text = "加载";
 			this.btnParse.UseVisualStyleBackColor = true;
 			this.btnParse.Click += new System.EventHandler(this.btnParse_Click);
 			// 
@@ -84,7 +84,7 @@ namespace WDBXEditor
 			this.btnBrowse.Name = "btnBrowse";
 			this.btnBrowse.Size = new System.Drawing.Size(59, 23);
 			this.btnBrowse.TabIndex = 2;
-			this.btnBrowse.Text = "Browse";
+			this.btnBrowse.Text = "浏览";
 			this.btnBrowse.UseVisualStyleBackColor = true;
 			this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
 			// 
@@ -95,7 +95,7 @@ namespace WDBXEditor
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(26, 13);
 			this.label1.TabIndex = 7;
-			this.label1.Text = "File:";
+			this.label1.Text = "文件：";
 			// 
 			// openFileDialog
 			// 
@@ -109,7 +109,7 @@ namespace WDBXEditor
 			this.btnLoad.Name = "btnLoad";
 			this.btnLoad.Size = new System.Drawing.Size(75, 23);
 			this.btnLoad.TabIndex = 15;
-			this.btnLoad.Text = "Open";
+			this.btnLoad.Text = "打开";
 			this.btnLoad.UseVisualStyleBackColor = true;
 			this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
 			// 
@@ -119,7 +119,7 @@ namespace WDBXEditor
 			this.btnClose.Name = "btnClose";
 			this.btnClose.Size = new System.Drawing.Size(75, 23);
 			this.btnClose.TabIndex = 16;
-			this.btnClose.Text = "Close";
+			this.btnClose.Text = "关闭";
 			this.btnClose.UseVisualStyleBackColor = true;
 			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 
@@ -187,7 +187,7 @@ namespace WDBXEditor
 			this.MinimumSize = new System.Drawing.Size(419, 377);
 			this.Name = "LoadMPQ";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "Load From MPQ";
+			this.Text = "从MPQ文件加载";
 			this.Load += new System.EventHandler(this.LoadMPQ_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();

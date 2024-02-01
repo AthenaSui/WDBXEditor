@@ -52,7 +52,7 @@
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(75, 23);
             this.btnSelect.TabIndex = 0;
-            this.btnSelect.Text = "Select Files";
+            this.btnSelect.Text = "选择文件";
             this.btnSelect.UseVisualStyleBackColor = true;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
@@ -63,7 +63,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Build Number: ";
+            this.label1.Text = "版本号：";
             // 
             // txtBuild
             // 
@@ -79,7 +79,7 @@
             this.btnParse.Name = "btnParse";
             this.btnParse.Size = new System.Drawing.Size(75, 23);
             this.btnParse.TabIndex = 3;
-            this.btnParse.Text = "Parse";
+            this.btnParse.Text = "分析";
             this.btnParse.UseVisualStyleBackColor = true;
             this.btnParse.Click += new System.EventHandler(this.btnParse_Click);
             // 
@@ -90,7 +90,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 4;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "关闭";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
             // btnSave
@@ -100,7 +100,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -113,7 +113,7 @@
             this.rdoCASC.Size = new System.Drawing.Size(79, 17);
             this.rdoCASC.TabIndex = 8;
             this.rdoCASC.TabStop = true;
-            this.rdoCASC.Text = "From CASC";
+            this.rdoCASC.Text = "从CASC文件";
             this.rdoCASC.UseVisualStyleBackColor = true;
             // 
             // rdoFile
@@ -123,7 +123,7 @@
             this.rdoFile.Name = "rdoFile";
             this.rdoFile.Size = new System.Drawing.Size(67, 17);
             this.rdoFile.TabIndex = 9;
-            this.rdoFile.Text = "From File";
+            this.rdoFile.Text = "从DB2文件";
             this.rdoFile.UseVisualStyleBackColor = true;
             // 
             // autoProgressBar1
@@ -166,13 +166,13 @@
             // File
             // 
             this.File.FillWeight = 250F;
-            this.File.HeaderText = "DB File";
+            this.File.HeaderText = "DB文件";
             this.File.Name = "File";
             this.File.ReadOnly = true;
             // 
             // Parsed
             // 
-            this.Parsed.HeaderText = "Parsed";
+            this.Parsed.HeaderText = "分析";
             this.Parsed.Name = "Parsed";
             this.Parsed.ReadOnly = true;
             // 
@@ -194,7 +194,7 @@
             this.MinimumSize = new System.Drawing.Size(470, 426);
             this.Name = "LegionParser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Legion Parser (WDB5, WDB6)";
+            this.Text = "军团再临解析器 (WDB5, WDB6)";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFiles)).EndInit();

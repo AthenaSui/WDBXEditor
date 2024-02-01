@@ -84,7 +84,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Process";
+            this.label1.Text = "进程";
             // 
             // cbProcessSelector
             // 
@@ -119,7 +119,7 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(29, 23);
             this.btnRefresh.TabIndex = 8;
-            this.toolTip1.SetToolTip(this.btnRefresh, "Reload processes");
+            this.toolTip1.SetToolTip(this.btnRefresh, "重载进程");
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -140,7 +140,7 @@
             this.grpLoc.Size = new System.Drawing.Size(239, 152);
             this.grpLoc.TabIndex = 7;
             this.grpLoc.TabStop = false;
-            this.grpLoc.Text = "Location";
+            this.grpLoc.Text = "位置";
             // 
             // chkAuto
             // 
@@ -149,8 +149,8 @@
             this.chkAuto.Name = "chkAuto";
             this.chkAuto.Size = new System.Drawing.Size(86, 17);
             this.chkAuto.TabIndex = 29;
-            this.chkAuto.Text = "Auto Update";
-            this.toolTip1.SetToolTip(this.chkAuto, "Poll player location");
+            this.chkAuto.Text = "自动更新";
+            this.toolTip1.SetToolTip(this.chkAuto, "轮询玩家位置");
             this.chkAuto.UseVisualStyleBackColor = true;
             this.chkAuto.CheckedChanged += new System.EventHandler(this.chkAuto_CheckedChanged);
             // 
@@ -160,7 +160,7 @@
             this.btnGetPos.Name = "btnGetPos";
             this.btnGetPos.Size = new System.Drawing.Size(83, 23);
             this.btnGetPos.TabIndex = 28;
-            this.btnGetPos.Text = "Get Location";
+            this.btnGetPos.Text = "获取位置";
             this.btnGetPos.UseVisualStyleBackColor = true;
             this.btnGetPos.Click += new System.EventHandler(this.btnGetPos_Click);
             // 
@@ -179,7 +179,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(45, 13);
             this.label14.TabIndex = 27;
-            this.label14.Text = "Y Coord";
+            this.label14.Text = "Y 坐标";
             // 
             // txtCurXPos
             // 
@@ -196,7 +196,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(45, 13);
             this.label13.TabIndex = 25;
-            this.label13.Text = "X Coord";
+            this.label13.Text = "X 坐标";
             // 
             // txtCurZPos
             // 
@@ -213,7 +213,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 13);
             this.label12.TabIndex = 25;
-            this.label12.Text = "Z Coord";
+            this.label12.Text = "Z 坐标";
             // 
             // txtCurMap
             // 
@@ -230,7 +230,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 23;
-            this.label9.Text = "Map Id";
+            this.label9.Text = "地图Id";
             // 
             // grpOffsets
             // 
@@ -258,7 +258,7 @@
             this.grpOffsets.Size = new System.Drawing.Size(200, 285);
             this.grpOffsets.TabIndex = 6;
             this.grpOffsets.TabStop = false;
-            this.grpOffsets.Text = "Offsets";
+            this.grpOffsets.Text = "偏移";
             // 
             // btnDelete
             // 
@@ -266,7 +266,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 27;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "删除";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -276,7 +276,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 26;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -296,7 +296,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(54, 13);
             this.label11.TabIndex = 21;
-            this.label11.Text = "Position X";
+            this.label11.Text = "位置 X";
             // 
             // txtGUID
             // 
@@ -332,7 +332,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 17;
-            this.label8.Text = "Map Id";
+            this.label8.Text = "地图Id";
             // 
             // txtNextObject
             // 
@@ -350,7 +350,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 13);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Next Object";
+            this.label7.Text = "下个Object";
             // 
             // txtLocalGUID
             // 
@@ -368,7 +368,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 13);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Local GUID";
+            this.label6.Text = "本地GUID";
             // 
             // txtFirstObject
             // 
@@ -386,7 +386,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 11;
-            this.label5.Text = "First Object";
+            this.label5.Text = "首个Object";
             // 
             // txtObjectManager
             // 
@@ -404,7 +404,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Object Manager";
+            this.label4.Text = "Object管理器";
             // 
             // txtClientConnection
             // 
@@ -422,7 +422,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Client Connection";
+            this.label3.Text = "客户端连接";
             // 
             // btnUntarget
             // 
@@ -432,7 +432,7 @@
             this.btnUntarget.Name = "btnUntarget";
             this.btnUntarget.Size = new System.Drawing.Size(29, 23);
             this.btnUntarget.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.btnUntarget, "Detach from process");
+            this.toolTip1.SetToolTip(this.btnUntarget, "从进程分离");
             this.btnUntarget.UseVisualStyleBackColor = true;
             this.btnUntarget.Click += new System.EventHandler(this.btnUntarget_Click);
             // 
@@ -444,7 +444,7 @@
             this.btnTarget.Name = "btnTarget";
             this.btnTarget.Size = new System.Drawing.Size(29, 23);
             this.btnTarget.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.btnTarget, "Attach to process");
+            this.toolTip1.SetToolTip(this.btnTarget, "附加到进程");
             this.btnTarget.UseVisualStyleBackColor = true;
             this.btnTarget.Click += new System.EventHandler(this.btnTarget_Click);
             // 
@@ -455,7 +455,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Build";
+            this.label2.Text = "版本";
             // 
             // cbBuildSelector
             // 
@@ -480,7 +480,7 @@
             this.lblErr.Name = "lblErr";
             this.lblErr.Size = new System.Drawing.Size(233, 13);
             this.lblErr.TabIndex = 30;
-            this.lblErr.Text = "Player Location requires Administrator privileges.";
+            this.lblErr.Text = "玩家位置需要以管理员身份运行。";
             this.lblErr.Visible = false;
             // 
             // chkUseBase
@@ -490,7 +490,7 @@
             this.chkUseBase.Name = "chkUseBase";
             this.chkUseBase.Size = new System.Drawing.Size(113, 17);
             this.chkUseBase.TabIndex = 9;
-            this.chkUseBase.Text = "Use Base Address";
+            this.chkUseBase.Text = "使用基本地址";
             this.chkUseBase.UseVisualStyleBackColor = true;
             // 
             // PlayerLocation
@@ -502,7 +502,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PlayerLocation";
-            this.Text = "Player Location Reader";
+            this.Text = "玩家位置读取器";
             this.Activated += new System.EventHandler(this.PlayerLocation_Activated);
             this.Deactivate += new System.EventHandler(this.PlayerLocation_Deactivate);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PlayerLocation_FormClosing);
